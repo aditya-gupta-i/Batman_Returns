@@ -1,4 +1,14 @@
-<!DOCTYPE html>
+<?php
+
+$conn = mysql_connect("localhost","root","");
+   
+if(! $conn ) {
+	die('Could not connect: ' . mysql_error());
+}
+
+
+?>
+
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -100,16 +110,58 @@ body {font-family: Arial;}
 			<div class="spec_head_row"><div class="spec_row_left"></div><!--Ravi----></div>
 		</div>
 		<div id="prices" class="tabcontent">
-			<h3>Compare Prices</h3>
-			<p>Here goes the Prices and links of Stores.</p>
+			<h2>Available at 7 Stores</h2>
+			<h1>Best Price : Rs.14,999</h1>
+			<div class="best_price_box">
+				<div class="bp_box_left"></div>
+				<div class="bp_box_middle"></div>
+			</div>
+			
+			<div class="spec_head"><h4>Prices at Other stores:</h4></div>
+			<div class="best_price_box">
+				<div class="bp_box_left"></div>
+				<div class="bp_box_middle"></div>
+			</div>
+			<div class="best_price_box">
+				<div class="bp_box_left"></div>
+				<div class="bp_box_middle"></div>
+			</div>
+			<div class="best_price_box">
+				<div class="bp_box_left"></div>
+				<div class="bp_box_middle"></div>
+			</div>
+			<div class="best_price_box">
+				<div class="bp_box_left"></div>
+				<div class="bp_box_middle"></div>
+			</div>
+			<div class="best_price_box">
+				<div class="bp_box_left"></div>
+				<div class="bp_box_middle"></div>
+			</div>	
 		</div>
 		<div id="reviews" class="tabcontent">
-			<h3>User Reviews</h3>
-			<p>Here appears the reviews of users.</p>
+			<h3>97 Reviews Found :</h3>
+			<div class="review_disp_box">
+				<div class="review_disp_box_head">Review Heading</div>
+				<div class="review_disp_box_body">The content of the Review goes here.Maximum 1500 characters allowed.</div>
+				<div class="review_disp_box_foot">
+					<div class="review_disp_box_foot_intwo">Name</div>
+					<div class="review_disp_box_foot_intwo">Stars</div>
+				</div>
+			</div>
+			<a href="#"><h3><center>Write a review</center></h3></a>
 		</div>
 		<div id="alternatives" class="tabcontent">
-			<h3>Alternatives</h3>
-			<p>Here appears the Similar Mobile Phones.</p>
+			<h3>Similar Phones:</h3>
+			<div class="container_alternative">
+				<img src="Xio.jpeg" height="200px"width="100px">
+				<center>
+					<h3>Redmi Note 5 Pro</h3>
+				</center>
+				<h4>4.5 stars</h4>
+				<hr>
+				<h3>Rs.14,999</h3>
+			</div>
 		</div>
 		<script> 
 		function openCity(evt, cityName) {
