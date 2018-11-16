@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 16, 2018 at 11:26 AM
+-- Generation Time: Nov 16, 2018 at 12:07 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 5.6.38
 
@@ -304,23 +304,22 @@ CREATE TABLE `sensors` (
   `proximity` tinyint(1) NOT NULL,
   `fingerprint` tinyint(1) NOT NULL,
   `gyroscope` tinyint(1) NOT NULL,
-  `ambient_light` tinyint(1) NOT NULL,
-  `extra` varchar(50) NOT NULL
+  `ambient_light` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `sensors`
 --
 
-INSERT INTO `sensors` (`mobileID-sensors`, `accelerometer`, `proximity`, `fingerprint`, `gyroscope`, `ambient_light`, `extra`) VALUES
-(10001, 1, 1, 1, 1, 1, 'Magnetic Induction'),
-(10002, 1, 1, 1, 1, 1, ' E Compass, Hall Sensor'),
-(10003, 1, 1, 1, 1, 1, 'Magnetometer, E-compass'),
-(10004, 1, 1, 1, 1, 1, 'E-compass, Hall Sensor, RGB Sensor'),
-(10005, 1, 1, 1, 1, 1, 'Pedometer'),
-(10006, 1, 1, 1, 1, 1, 'E-compass'),
-(10007, 1, 1, 1, 1, 1, ' Face ID, Barometer, Three-axis Gyro'),
-(10008, 1, 1, 1, 1, 1, ' Phone Status Indicator');
+INSERT INTO `sensors` (`mobileID-sensors`, `accelerometer`, `proximity`, `fingerprint`, `gyroscope`, `ambient_light`) VALUES
+(10001, 1, 1, 1, 1, 1),
+(10002, 1, 1, 1, 1, 1),
+(10003, 1, 1, 1, 1, 1),
+(10004, 1, 1, 1, 1, 1),
+(10005, 1, 1, 1, 1, 1),
+(10006, 1, 1, 1, 1, 1),
+(10007, 1, 1, 1, 1, 1),
+(10008, 1, 1, 1, 1, 1);
 
 -- --------------------------------------------------------
 
