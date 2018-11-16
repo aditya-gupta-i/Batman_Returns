@@ -63,7 +63,7 @@ $retval_all= mysql_query($query_all,$conn);
 <link rel="stylesheet" type="text/css" href="newstyle.css">
 <link rel="stylesheet" type="text/css" href="style.css">
 <title>Filter Page</title>
-<link rel="stylesheet" type="text/css" href="webst1.css">
+<!---<link rel="stylesheet" type="text/css" href="webst1.css"> --->
 </head>
 <body>
 <div class="maincon">
@@ -581,8 +581,9 @@ function createAll(row)     //creates Srboxes according to sql(not actually sql)
 				var srb1a=document.createElement("div");
 				srb1a.className='srb1a';
 				
-				var spanbox=document.createElement("span");
-				spanbox.id='phoneName';
+				var spanbox=document.createElement("A");
+				//spanbox.id='phoneName';
+				spanbox.setAttribute("href", "mobiles.php?id="+row[d].mobileID);
 				
 				var srb1b=document.createElement("div");
 				srb1b.className='srb1b';
