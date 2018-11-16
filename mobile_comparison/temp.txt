@@ -1,0 +1,32 @@
+<!------<?php while($mobile = mysql_fetch_assoc($retval_all)){ ?> 
+	<div class="searchresultbox">
+		<div class="srimagebox"><center><img src="Xio.jpeg"height="150px"width=""></center></div>
+        <div class="srb1">
+			<div class="srb1a"><?php  echo $mobile["mobile_name"] ?><hr align="left"width="95%"></div>
+			<div class="srb1b"> 
+				<div class="srb1bheading"><b>Features:</b></div>
+				✔️&nbsp;&nbsp;<?php echo $mobile["display_type"] ?><br>
+				✔️&nbsp;&nbsp;<?php echo $mobile["ram"] ?>&nbsp; GB RAM<br>
+				✔️&nbsp;&nbsp;Features 3<br>
+				✔️&nbsp;&nbsp;Features 4<br>
+			</div>
+			<div class="srb1c">
+				<div class="srb1cheading">See Full Specifications</div>
+				✔️&nbsp;&nbsp;Features 5<br>
+				✔️&nbsp;&nbsp;Features 6<br>
+				✔️&nbsp;&nbsp;Features 7<br>
+				✔️&nbsp;&nbsp;Features 8<br>
+			</div>
+		</div>
+        <div class="srb2">
+			<div class="srb2a">Rs.<?php echo $mobile["price"] ?></div>
+			<div class="srb2b"><center>Ratings Box</center></div>
+			<div class="srb2c">
+				<center>
+				<div class="srbbutton"><center>Compare</center></div>
+				<div class="srbbutton"><center>See Price</center></div>
+				</center>
+			</div>
+		</div>
+	</div> 
+	<?php } ?> ----->

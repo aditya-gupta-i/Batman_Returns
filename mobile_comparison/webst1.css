@@ -1,0 +1,720 @@
+html {
+     margin: 0px;
+     height: 100%;
+     width: 100%;
+	 }
+
+body {font-family: Verdana, Geneva, sans-serif;
+     margin: 0px;
+     min-height: 100%;
+     width: 100%;
+     }
+.header{width:100%;
+	 height:15%;
+	 background-color:#d9dadb;
+	 }
+.topmenu{
+	 background-color:black;
+	 display:inline-block;
+     color:white;
+	 font-size:20;
+	 padding-left:10px;
+	 padding-right:10px;
+	 width:81px;
+	 text-align:center;
+	 height:28px;
+	 }
+.topmenu:hover{background-color:gray;
+	 color:yellow;
+	 } 
+.container{height:365px;
+	 display:inline-block;
+	 width:225px;
+	 border-radius:8px;
+	 border-style:solid;
+	 border-color:gray;
+	 background-color:white;
+	 border-width:1px;
+	 text-align:center;
+	 padding-top:10px}
+.container:hover{border-color:red;
+	 border-width:1px;	 
+	 }
+.label{width:942px;
+	 background-color:gray;
+     color:white;
+	 font-size:30;
+	 text-align:center;
+	 margin-left:15px;
+	 }
+.outer{width:940px;
+	 border-style:solid;
+	 border-color:gray;
+	 background-color:white;
+	 border-width:1px;
+	 margin-left:15px;
+	 padding-bottom:4px;
+	 }
+h3:hover{color:orange;}
+h4:hover{color:gray;}
+.sidead{position:absolute; left:975px; top:800px; border-style:solid;}
+.indexmenu {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: medium;
+	font-weight: bold;
+	background-color: #00F;
+	text-align: center;
+	vertical-align: middle;
+	display: inline-block;
+	margin: 0px;
+	height: 40px;
+	width: 184px;
+	left: 170px;
+}
+.topmenu{font-family: Verdana, Geneva, sans-serif;
+	 float:left;
+	 width:85px;
+	 font-size:18;}
+.topmenu:link{color:white;}
+.topmenu:visited{color:white;}
+.topmenu:active{color:white;}
+.maincon {
+	font-family: Verdana, Geneva, sans-serif;
+	background-color: #edf1ff;
+	display: inline-block;
+	width: 980px;
+	margin-top: 15px;
+	margin-right: 10px;
+	margin-left: 10px;
+	border: thin solid #0037ff;
+	position: relative;
+	visibility: visible;
+	left: 140px;
+	cursor: default;
+	padding-bottom:5px;
+}
+.indexmenu {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: #869df4;
+	text-align: center;
+	padding-top:5px;
+	padding-bottom:5px;
+	display: inline-block;
+	margin-bottom:15px;
+	height: 40px;
+	width: 196px;
+	left: 170px;
+	float:left;
+}
+.indexmenu:hover{background-color: #0c3ef9;	}
+.gallery {background-color:white;
+	height: 420px;
+	width: 440px;
+	margin-top: 15px;
+	margin-left: 5px;
+	border: thin solid  #869df4;
+}
+.gallery2{background-color:white;
+	height: 153px;
+	width: 440px;
+	margin-top:5px;
+	margin-left: 5px;
+	border: thin solid  #869df4;
+}
+.overview {
+	font-family: Verdana, Geneva, sans-serif;
+	margin: 5px;
+	height: 580px;
+	width: 520px;
+	border: thin solid #869df4;
+	position: absolute;
+	top:46px;
+	left:448px;
+}
+.compareprice {
+	font-family: Verdana, Geneva, sans-serif;
+	margin: 5px;
+	height: 524px;
+	width: 968px;
+	border: thin solid #869df4;
+	position: relative;
+}
+.label{font-size: 20px;
+	font-weight: bold;
+	background-color: #869df4;
+	text-align: left;
+	padding-top:5px;
+	height: 37px;
+	width: 958px;
+	position:absolute;
+	left:-15px;
+	padding-left:10px;
+}
+.devicename {
+	font-size: 29;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+	margin: 0px;
+	height: 60px;
+	width: 100%;
+	border-bottom-width: thin;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-bottom-color:#869df4;
+	line-height:55px;
+}
+.price{font-family:Arial, Helvetica, sans-serif;
+	color:Orange;
+	font-size: 36;
+	text-align: left;
+	margin: 0px;
+	height: 60px;
+	width: 100%;
+	border-bottom-width: thin;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-bottom-color:#869df4;
+	line-height:55px;
+}
+.seepricesbutton {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 22;
+	background-color:#03af22;
+	text-align: center;
+	height: 30px;
+	position: absolute;
+	left: 300px;
+	top: 75px;
+	line-height:27px;
+	border-radius:5px;
+}
+.seepricesbutton:hover{background-color:#026614;}
+.ratings{font-family:Arial, Helvetica, sans-serif;
+	text-align: left;
+	margin: 0px;
+	height: 55px;
+	width: 100%;
+	border-bottom-width: thin;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-bottom-color:#869df4;
+	line-height:55px;
+}
+.features {
+	font-family: Verdana, Geneva, sans-serif;
+	margin: 0px;
+	height: 200px;
+	width: 100%;
+	border-bottom-width: thin;
+	border-bottom-style: solid;
+	border-bottom-color: #09F;
+	
+}
+.label2 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: medium;
+	background-color: #869df4;
+	height: 35px;
+	width: 100%;
+	line-height:35px;
+	text-align:left;
+}
+.featurepoints{font-family: Verdana, Geneva, sans-serif;
+			font-size: small;
+			height: 165px;
+			width: 49.8%;
+			border-right-width: thin;
+			border-right-style: solid;
+			border-right-color:blue;
+			display:inline-block;
+			float:left;
+			list-style-image: url(file:///C:/xampp/htdocs/website/tick.png);		
+}
+ul.a {
+    list-style-image: url('tick.png');
+}
+ul.b {
+    list-style-image: url('upvote.png');
+}
+ul.c {
+    list-style-image: url('downvote.jpg');
+}
+.columnlabel {
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight: bold;
+	font-size:medium;
+	background-color: #b5d7ff;
+	text-align: center;
+	vertical-align: middle;
+	display: inline-block;
+	float: left;
+	height: 30px;
+	width: 20%;
+	border-bottom-width: thin;
+	border-bottom-style: solid;
+	border-bottom-color: #0037ff;
+	position:relative;
+	top:40px;
+	line-height:28px;
+}
+.row{
+	font-family: Verdana, Geneva, sans-serif;
+	text-align: center;
+	vertical-align: middle;
+	height: 90px;
+	width: 100%;
+	border-bottom-width: thin;
+	border-bottom-style: solid;
+	border-bottom-color: #0037ff;
+	position:relative;
+	top:70px;
+	line-height:28px;
+}
+.column {
+	font-family: Verdana, Geneva, sans-serif;
+	text-align: center;
+	vertical-align: middle;
+	display: inline-block;
+	float: left;
+	height: 91px;
+	width: 19.89%;
+	position:relative;
+	top:-31px;
+	line-height:20px;
+	border-right-style:solid;
+	border-right-width:thin;
+	border-right-color: #0037ff;
+}
+.pricecolumn {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 35px;
+	text-align: center;
+	vertical-align: middle;
+	display: inline-block;
+	float: left;
+	height: 91px;
+	width: 19.89%;
+	position:relative;
+	top:-31px;
+	line-height:28px;
+	border-right-style:solid;
+	border-right-width:thin;
+	border-right-color: #0037ff;
+	color:green;
+}
+.shippingcolumn {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: 13px;
+	text-align: center;
+	vertical-align: middle;
+	display: inline-block;
+	float: left;
+	height: 91px;
+	width: 19.89%;
+	position:relative;
+	top:-31px;
+	line-height:22px;
+	border-right-style:solid;
+	border-right-width:thin;
+	border-right-color: #0037ff;
+}
+.starscolumn {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: 25px;
+	vertical-align: middle;
+	display: inline-block;
+	float: left;
+	height: 91px;
+	width: 19.89%;
+	position:relative;
+	top:-31px;
+	line-height:40px;
+	border-right-style:solid;
+	border-right-width:thin;
+	border-right-color: #0037ff;
+}
+.stars-container {
+	top:25px;
+  position: relative;
+  display: inline-block;
+  color: transparent;
+  vertical-align:middle;
+}
+
+.stars-container:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content:'||||||||||' ;
+  color: lightgray;
+}
+
+.stars-container:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content:'||||||||||';
+  color: gold;
+  overflow: hidden;
+}
+
+.stars-0:after { width: 0%; }
+.stars-10:after { width: 10%; }
+.stars-20:after { width: 20%; }
+.stars-30:after { width: 30%; }
+.stars-40:after { width: 40%; }
+.stars-50:after { width: 50%; }
+.stars-60:after { width: 60%; }
+.stars-70:after { width: 70%; }
+.stars-80:after { width: 80%; }
+.stars-90:after { width: 90%; }
+.stars-100:after { width: 100; }
+
+.buynowbutton {
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight: bold;
+	background-color: green;
+	text-align: center;
+	vertical-align: middle;
+	height: 35%;
+	position:relative;
+	top: 20px;
+	border-radius:8px;
+	color:white;
+	padding-top:15px;
+	width: 85%;
+	font-size: 15;
+}
+.buynowbutton:hover{padding-top:12px;
+					background-color:orange;
+					height:40%;
+					width:90%;
+}
+.specifications{
+	font-family: Verdana, Geneva, sans-serif;
+	margin: 5px;
+	width: 968px;
+	height:1090px;
+	border: thin solid #869df4;
+	position:relative;
+}
+.specilabel {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: medium;
+	font-weight:bold;
+	color:white;
+	background-color:#b5d7ff;
+	text-align: left;
+	display: inline-block;
+	margin-top: 0px;
+	margin-left:5px;
+	margin-right:0px;
+	margin-bottom:1px;
+	float: left;
+	height: 35px;
+	width: 467px;
+	position: relative;
+	line-height:32px;
+	padding-left:10px;
+}
+.specicon {
+	font-size: medium;
+	background-color:#b5d7ff;
+	text-align: left;
+	display: inline-block;
+	margin-top:0px;
+	margin-right:0px;
+	margin-bottom:1px;
+	margin-left:5px;
+	float: left;
+	height: 35px;
+	width: 467px;
+	position: relative;
+	line-height:32px;
+	padding-left:10px;
+}
+.prosandcons{
+	font-family: Verdana, Geneva, sans-serif;
+	margin: 5px;
+	width: 968px;
+	height:756px;
+	border: thin solid #869df4;
+	position:relative;
+}
+.label3{width:958px;
+	 background-color:#869df4;
+     color:white;
+	 font-size:22px;
+	 text-align:left;
+	 margin-left:0px;
+	 height:40px;
+	 padding-left:10px;
+	 line-height:35px;
+ }
+.proslabel {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: medium;
+	font-weight:bold;
+	color:blue;
+	background-color:#b5d7ff;
+	text-align: left;
+	display: inline-block;
+	margin-top: 0px;
+	margin-left:5px;
+	margin-right:0px;
+	margin-bottom:0px;
+	float: left;
+	height: 35px;
+	width: 467px;
+	position: relative;
+	line-height:32px;
+	padding-left:10px;
+	vertical-align:middle;
+}
+.proscon {
+	font-size: medium;
+	background-color:#b5d7ff;
+	font-weight:bold;
+	text-align: left;
+	display: inline-block;
+	margin-top:0px;
+	margin-right:0px;
+	margin-bottom:0px;
+	margin-left:5px;
+	float: left;
+	height: 35px;
+	width: 467px;
+	position: relative;
+	line-height:32px;
+	padding-left:10px;
+	color:green;
+}
+.concon {
+	font-size: medium;
+	background-color:#b5d7ff;
+	font-weight:bold;
+	text-align: left;
+	display: inline-block;
+	margin-top:0px;
+	margin-right:0px;
+	margin-bottom:0px;
+	margin-left:5px;
+	float: left;
+	height: 35px;
+	width: 467px;
+	position: relative;
+	line-height:32px;
+	padding-left:10px;
+	color:red;
+}
+.alternatives{
+	font-family: Verdana, Geneva, sans-serif;
+	margin: 5px;
+	width: 968px;
+	height:350px;
+	border: thin solid #869df4;
+	position:relative;
+}
+.userreviews{
+	font-family: Verdana, Geneva, sans-serif;
+	margin: 5px;
+	width: 968px;
+	height:250px;
+	border: thin solid #869df4;
+	position:relative;
+}
+.box{font-family: Verdana, Geneva, sans-serif;
+	margin-top: 5px;
+	margin-bottom:5px;
+	margin-left:1px;
+	margin-right:0px;
+	width: 33%;
+	height:175px;
+	border: thin solid #edf1ff;
+	position:relative;
+	display:inline-block;
+	float:left;
+	padding-top:25px;
+}
+.box:hover{border: thin solid #869df4;}
+.footer{position:relative;
+		width:100%;
+		height:300px;
+		background-color:#404144;
+		margin-top:25px;
+		color:white;
+		font:small;
+		padding:10px;
+		display:inline-block;
+		float:left;
+}
+.formcon1{
+	font-family: Verdana, Geneva, sans-serif;
+	margin: 5px;
+	width: 968px;
+	height:50px;
+	border: thin solid #869df4;
+	position:relative;
+}
+.formcon2{
+	font-family: Verdana, Geneva, sans-serif;
+	margin: 5px;
+	width: 968px;
+	height:660px;
+	border: thin solid #869df4;
+	position:relative;
+}
+.innerspecicon {
+	font-size: medium;
+	text-align: left;
+	display: inline-block;
+	margin-top:0px;
+	margin-right:0px;
+	margin-bottom:0px;
+	margin-left:0px;
+	float: right;
+	height: 35px;
+	width: 310px;
+	position: relative;
+	line-height:32px;
+	font-weight:bold;
+}
+.innerspecicon2 {
+	font-size: medium;
+	text-align: center;
+	margin-top:0px;
+	margin-right:0px;
+	margin-bottom:0px;
+	margin-left:0px;
+	height: 35px;
+	width: 155px;
+	position: relative;
+	line-height:32px;
+}
+.linkbar {
+	background-color: #edf1ff;
+	display: inline-block;
+	float:left;
+	width:100%;
+	margin-top: 30px;
+	position: relative;
+	visibility: visible;
+	cursor: default;
+}
+.indexmenu2 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: #869df4;
+	text-align: center;
+	padding-top:5px;
+	padding-bottom:5px;
+	display: inline-block;
+	margin-bottom:15px;
+	height: 40px;
+	width: 213px;
+	float:left;
+}
+.indexmenu2:hover{background-color: #0c3ef9;	}
+
+.mainconlabel{width:970px;
+	 background-color:#869df4;
+     color:white;
+	 font-size:22px;
+	 text-align:left;
+	 margin-left:0px;
+	 height:40px;
+	 padding-left:10px;
+	 line-height:35px;
+ }
+ 
+.preview{ 
+	background-color:white;
+	width:238.5px;
+	height:270px;
+	margin-top:5px;
+	margin-left:none;
+	margin-right:none;
+	position:relative;
+	display:inline-block;
+	float:left;
+	border:none;
+	padding-top:10px;
+	line-height:27px;
+}
+.rating{
+	display:inline-block;
+	float:right;
+	color:green;
+	font-size:17px;
+	font-weight:bold;
+	padding-right:5px;
+}
+.reviewname{
+	font-family: Verdana, Geneva, sans-serif;
+	margin: 5px;
+	width: 472px;
+	height:30px;
+	border: thin solid #869df4;
+	position:relative;
+}
+.reviewheading{
+	font-family: Verdana, Geneva, sans-serif;
+	margin: 5px;
+	width: 958px;
+	height:30px;
+	border: thin solid #869df4;
+	position:relative;
+}
+.reviewsummary{
+	font-family: Verdana, Geneva, sans-serif;
+	margin: 5px;
+	width: 958px;
+	height:300px;
+	border: thin solid #869df4;
+	position:relative;
+}
+.reviewbox{
+	font-family: Verdana, Geneva, sans-serif;
+	margin: 5px;
+	width: 968px;
+	height:490px;
+	border: thin solid #869df4;
+	position:relative;
+}
+.submitbutton {
+	color:white;
+	font-family: "Times New Roman", Times, serif;
+	font-size:20;
+	background-color:#1539DA;
+	text-align: center;
+	height: 30px;
+	position: relative;
+	border-radius:5px;
+}
+.submitbutton:hover{background-color:#4D66D8;}
+.userreviewbox{
+	font-family: Verdana, Geneva, sans-serif;
+	margin: 5px;
+	width: 968px;
+	height:auto;
+	border: thin solid #869df4;
+	position:relative;
+}
+.reviewdisplaybox{ padding:10px;
+	background-color:white;
+	width:920px;
+	height:auto;
+	margin:5px;
+	position:relative;
+}
+

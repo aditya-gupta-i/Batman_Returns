@@ -7,10 +7,57 @@ $conn = mysql_connect("localhost","root","");
    }
 $sel=mysql_select_db('batmanreturns'); 
 
+$query_all="SELECT * FROM overview natural join display natural join storage";
+$retval_all= mysql_query($query_all,$conn);
+
+
 ?>
 
 <html>
 <head>
+<style>
+.searchresultmaincon{
+	font-family: Verdana, Geneva, sans-serif;
+	background-color: #FFF;
+	display: inline-block;
+	float: left;
+	height: 90%;
+	width: 79%;
+	border: 1px solid #ccc;
+	position: relative;
+	margin-left:10px;
+	overflow:auto;
+}
+.searchresultbox {
+	background-color: #edf1ff;
+	text-align: left;
+	display: inline-block;
+	float: left;
+	height: 200px;
+	width:99%;
+	position: relative;
+	margin-top:5px;
+	border-style:solid;
+	border-width:0.5px;
+	border-color:gray;
+	padding-top:1px;
+}
+.resultstatsbox {
+	background-color: #edf1ff;
+	text-align: left;
+	display: inline-block;
+	float: left;
+	height: auto;
+	width: 99%;
+	position: relative;
+	margin-top:0px;
+	margin-left:0px;
+	vertical-align: middle;
+	padding-left: 5px;
+	padding-top: 3px;
+	padding-bottom:5px;
+}
+</style>
 <script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
 <link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="newstyle.css">
@@ -27,14 +74,14 @@ $sel=mysql_select_db('batmanreturns');
   <div class="innerfilterbox">
     <div class="innerfilterboxheading">PRICE<div class="resetbutton"><center>Reset</center></div></div>
     <div class="innerfilterboxcontent">
-    	<input type="checkbox"name="Price"value="1" onchange=func()><span>Below Rs.1000</span><br>
-        <input type="checkbox"name="Price"value="2" onchange=func()><span>Rs.1000-Rs.2000</span><br>
-        <input type="checkbox"name="Price"value="3" onchange=func()><span>Rs.2000-Rs.5000</span><br>
-        <input type="checkbox"name="Price"value="4" onchange=func()><span>Rs.5000-Rs.10000</span><br>
-        <input type="checkbox"name="Price"value="5" onchange=func()><span>Rs.10000-Rs.20000</span><br>
-        <input type="checkbox"name="Price"value="6" onchange=func()><span>Rs.20000-Rs.25000</span><br>
-        <input type="checkbox"name="Price"value="7" onchange=func()><span>Rs.25000-Rs.30000</span><br>
-        <input type="checkbox"name="Price"value="8" onchange=func()><span>Above Rs.30000</span><br>
+    	<input type="checkbox"name="Price"value="1000" onchange=func()><span>Below Rs.1000</span><br>
+        <input type="checkbox"name="Price"value="2000" onchange=func()><span>Below Rs.2000</span><br>
+        <input type="checkbox"name="Price"value="5000" onchange=func()><span>Below Rs.5000</span><br>
+        <input type="checkbox"name="Price"value="10000" onchange=func()><span>Below Rs.10000</span><br>
+        <input type="checkbox"name="Price"value="20000" onchange=func()><span>Below Rs.20000</span><br>
+        <input type="checkbox"name="Price"value="25000" onchange=func()><span>Below Rs.25000</span><br>
+        <input type="checkbox"name="Price"value="30000" onchange=func()><span>Below Rs.30000</span><br>
+        <input type="checkbox"name="Price"value="200000" onchange=func()><span>Above Rs.30000</span><br>
     </div>
   </div>
   <div class="innerfilterbox">
@@ -195,6 +242,7 @@ $sel=mysql_select_db('batmanreturns');
 </div>
 
 </form>
+
 <script type="text/javascript">
 var i;              
 var j1=0;
@@ -460,7 +508,8 @@ function checkArray(k,array)     	  // Checks if the ticked value is already pre
 }	
 
 function ajaxRequest()   			 // Sends Request,applies createAll() and deleteBoxes().
-{									 // Updates new and old received array.		
+{									 // Updates new and old received array.	
+	//alert("entered into ajax func");
 	var xmlhttp = new XMLHttpRequest();
 	var sendPrice = JSON.stringify(priceArray);	
 	var sendBrand = JSON.stringify(brandsArray);
@@ -487,10 +536,11 @@ function ajaxRequest()   			 // Sends Request,applies createAll() and deleteBoxe
 			//alert(oldIDarray);
 			//alert(newIDarray);
 			oldIDarray=newIDarray;
+			//alert(received);
 		}
 	};
-	xmlhttp.open("POST", "filter.php?prices="+sendPrice+"&brands="+sendBrand+"&RAM="+sendRAM+"&core="+sendCores+
-	"&frequency="+sendFrequency+"&os="+sendOs, true);
+	xmlhttp.open("POST", "ajaxJSON.php?RAM="+sendRAM+"&brands="+sendBrand+"&prices="+sendPrice, true);
+	//xmlhttp.open("POST", "filter.php?prices="+sendPrice+"&brands="+sendBrand+"&RAM="+sendRAM, true);
 	xmlhttp.send();
 }
 
@@ -618,14 +668,14 @@ function createAll(row)     //creates Srboxes according to sql(not actually sql)
 				spanbold.appendChild(document.createTextNode("Features:"));
 				srb1bheading.appendChild(spanbold);
 				srb1b.appendChild(srb1bheading);
-				span1.appendChild(document.createTextNode("Feature 1"));
-				span2.appendChild(document.createTextNode("Feature 2"));
-				span3.appendChild(document.createTextNode("Feature 3"));
-				span4.appendChild(document.createTextNode("Feature 4"));
-				span5.appendChild(document.createTextNode("Feature 5"));
-				span6.appendChild(document.createTextNode("Feature 6"));
-				span7.appendChild(document.createTextNode("Feature 7"));
-				span8.appendChild(document.createTextNode("Feature 8"));
+				span1.appendChild(document.createTextNode(row[d].ram+" GB RAM"));
+				span2.appendChild(document.createTextNode(row[d].megapixels+" MP Rear Camera"));
+				span3.appendChild(document.createTextNode(row[d].rom+" GB Internal Memory"));
+				span4.appendChild(document.createTextNode(row[d].gpu+" Graphics Processor"));
+				span5.appendChild(document.createTextNode(row[d].chipset));
+				span6.appendChild(document.createTextNode(row[d].screen_size+" inches Screen Size"));
+				span7.appendChild(document.createTextNode(row[d].display_type+" Display"));
+				span8.appendChild(document.createTextNode(row[d].capacity+" mAH Battery"));
 				li1.appendChild(span1);
 				li2.appendChild(span2);
 				li3.appendChild(span3);
@@ -766,9 +816,13 @@ function emptyScreen()   //Deletes all elements present on screen that are prese
 function func()
 {	
 	createDiv();
+	//alert("Create div executed");
 	createArrays();
+	//alert("createArrays executed");
 	emptyScreen();		//performs only when there are no elements in priceArray.....
+	//alert("emptyScreen executed");
 	ajaxRequest();	
+	//alert("AJAX request executed");
 }
 </script>
 
@@ -780,7 +834,7 @@ function func()
 		</div>
 
 	<!-----staart of SRBOX------>
-		
+	
 	<!-----End of SRBOX---------->
 
 

@@ -20,7 +20,7 @@ a{
 	display: inline-block;
 	float: left;
 	height: auto;
-	width: 99.5%;
+	width: 99%;
 	position: relative;
 	margin-top:0px;
 	margin-left:0px;
@@ -39,6 +39,7 @@ a{
 	border: 1px solid #ccc;
 	position: relative;
 	margin-left:10px;
+	overflow:auto;
 }
 .searchresultbox {
 	background-color: #edf1ff;
@@ -46,7 +47,7 @@ a{
 	display: inline-block;
 	float: left;
 	height: 200px;
-	width: 100%;
+	width:99%;
 	position: relative;
 	margin-top:5px;
 	border-style:solid;
