@@ -63,7 +63,7 @@
     	<p> <a href="index.php?logout='1'" style="color: red;">Logout</a> </p>
       
       <?php  if( strcmp(($_SESSION['username']),"adminADI") || strcmp(($_SESSION['username']),"adminRAVI") ) : ?>
-        <p> Click <a href="../batmanreturns/admin/admin_panel.php"><strong>here</strong></a> for <strong>Admin Panel.</strong>
+        <p> Click <a href="../mobile_comparison/admin_entry.html"><strong>here</strong></a> for <strong>Admin Panel.</strong>
       <?php endif ?>  
    
     <?php endif ?>

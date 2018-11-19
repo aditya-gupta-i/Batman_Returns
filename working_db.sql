@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 16, 2018 at 12:07 PM
+-- Generation Time: Nov 19, 2018 at 07:21 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 5.6.38
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `battery` (
-  `mobileID-battery` bigint(20) NOT NULL,
+  `mobileID` bigint(20) NOT NULL,
   `type` varchar(20) NOT NULL,
   `capacity` int(11) NOT NULL,
   `removability` tinyint(1) NOT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE `battery` (
 -- Dumping data for table `battery`
 --
 
-INSERT INTO `battery` (`mobileID-battery`, `type`, `capacity`, `removability`, `wireless_charge`, `fast_charge`) VALUES
+INSERT INTO `battery` (`mobileID`, `type`, `capacity`, `removability`, `wireless_charge`, `fast_charge`) VALUES
 (10001, 'Li-Polymer', 3500, 0, 0, 1),
 (10002, 'Li-Polymer', 4000, 0, 0, 0),
 (10003, '-', 5000, 0, 0, 1),
@@ -58,7 +58,7 @@ INSERT INTO `battery` (`mobileID-battery`, `type`, `capacity`, `removability`, `
 --
 
 CREATE TABLE `connectivity` (
-  `mobileID-connectivity` bigint(20) NOT NULL,
+  `mobileID` bigint(20) NOT NULL,
   `bluetooth` varchar(30) NOT NULL,
   `wifi` varchar(30) NOT NULL,
   `hotspot` varchar(30) NOT NULL,
@@ -73,7 +73,7 @@ CREATE TABLE `connectivity` (
 -- Dumping data for table `connectivity`
 --
 
-INSERT INTO `connectivity` (`mobileID-connectivity`, `bluetooth`, `wifi`, `hotspot`, `usb`, `nfc`, `gps`, `network`, `infrared`) VALUES
+INSERT INTO `connectivity` (`mobileID`, `bluetooth`, `wifi`, `hotspot`, `usb`, `nfc`, `gps`, `network`, `infrared`) VALUES
 (10001, 'YES, 4.2', 'YES', 'YES', 'YES', 1, 1, '4G VoLTE, GSM, 4G LT', 0),
 (10002, 'YES, 5', 'YES', 'YES', 'YES', 1, 1, '4G VoLTE, UMTS, GSM,', 1),
 (10003, 'YES, 5.0', 'YES', 'YES', 'YES', 1, 1, '4G LTE, UMTS, GSM', 0),
@@ -90,7 +90,7 @@ INSERT INTO `connectivity` (`mobileID-connectivity`, `bluetooth`, `wifi`, `hotsp
 --
 
 CREATE TABLE `design` (
-  `mobileID-design` bigint(20) NOT NULL,
+  `mobileID` bigint(20) NOT NULL,
   `color` varchar(20) NOT NULL,
   `weight` int(11) NOT NULL,
   `dimensions` varchar(30) NOT NULL,
@@ -104,7 +104,7 @@ CREATE TABLE `design` (
 -- Dumping data for table `design`
 --
 
-INSERT INTO `design` (`mobileID-design`, `color`, `weight`, `dimensions`, `sim_type`, `external_card_slot`, `number_of_sims`, `water_resistance`) VALUES
+INSERT INTO `design` (`mobileID`, `color`, `weight`, `dimensions`, `sim_type`, `external_card_slot`, `number_of_sims`, `water_resistance`) VALUES
 (10001, 'Starry Purple/Sunris', 169, '74 x 156.7 x 7.99', 'Dual Nano', 'dedicated microSD', 2, 'No'),
 (10002, 'Red/Black/Blue/Gold', 181, '75.35 x 158.38 x 8.05', 'Dual Nano', 'Hybrid microSD', 2, 'No'),
 (10003, 'Black', 205, '76 x 156 x 8.98', 'Dual Nano', 'Dedicated microSD', 2, 'No'),
@@ -121,7 +121,7 @@ INSERT INTO `design` (`mobileID-design`, `color`, `weight`, `dimensions`, `sim_t
 --
 
 CREATE TABLE `display` (
-  `mobileID-display` bigint(20) NOT NULL,
+  `mobileID` bigint(20) NOT NULL,
   `display_type` varchar(20) NOT NULL,
   `resolution` varchar(30) NOT NULL,
   `screen_size` decimal(10,1) NOT NULL,
@@ -136,7 +136,7 @@ CREATE TABLE `display` (
 -- Dumping data for table `display`
 --
 
-INSERT INTO `display` (`mobileID-display`, `display_type`, `resolution`, `screen_size`, `aspect_ratio`, `notch`, `ppi`, `screen_ratio`, `color_reproduction`) VALUES
+INSERT INTO `display` (`mobileID`, `display_type`, `resolution`, `screen_size`, `aspect_ratio`, `notch`, `ppi`, `screen_ratio`, `color_reproduction`) VALUES
 (10001, 'TFT-LTPS', '2340 x 1080', '6.3', '19.5 : 9', 1, 400, '91', 16),
 (10002, 'IPS(in-cell)', '2160x1080', '6.0', '18:9', 0, 403, '77', 16),
 (10003, 'LTPS IPS', '1080 x 2246', '6.2', '18.7:9', 1, 402, '82', 16),
@@ -153,7 +153,7 @@ INSERT INTO `display` (`mobileID-display`, `display_type`, `resolution`, `screen
 --
 
 CREATE TABLE `front_camera` (
-  `mobileID-fcamera` bigint(20) NOT NULL,
+  `mobileID` bigint(20) NOT NULL,
   `megapixels` varchar(20) NOT NULL,
   `flash` tinyint(1) NOT NULL,
   `video` varchar(20) NOT NULL,
@@ -166,7 +166,7 @@ CREATE TABLE `front_camera` (
 -- Dumping data for table `front_camera`
 --
 
-INSERT INTO `front_camera` (`mobileID-fcamera`, `megapixels`, `flash`, `video`, `dual_camera`, `aperture`, `features`) VALUES
+INSERT INTO `front_camera` (`mobileID`, `megapixels`, `flash`, `video`, `dual_camera`, `aperture`, `features`) VALUES
 (10001, '25MP', 1, 'YES', 0, 'F2.0', 'Sensor Size, Pixel Data: 1/2.78, 0.9 micrometer, Sensor Type: CMOS, Sensor Model, Manufacturer: IMX576, Sony, 79 Degree Wide Angle of Front, F2.0 Aperture, Flashlight, Lens Number: 5P, Video, Photo Ma'),
 (10002, '20MP', 0, 'YES', 0, 'F2.2', 'Aperture - f/2.2, 1.0 microns Pixel Size\r\n'),
 (10003, '12MP', 0, 'UHD at 30fps, FHD at', 0, 'f2.0', 'f2.0, 1.25 micrometer'),
@@ -183,7 +183,7 @@ INSERT INTO `front_camera` (`mobileID-fcamera`, `megapixels`, `flash`, `video`, 
 --
 
 CREATE TABLE `media` (
-  `mobileID-media` bigint(20) NOT NULL,
+  `mobileID` bigint(20) NOT NULL,
   `imagelink1` varchar(500) NOT NULL,
   `imagelink2` varchar(500) NOT NULL,
   `imagelink3` varchar(500) NOT NULL,
@@ -226,7 +226,7 @@ INSERT INTO `overview` (`mobileID`, `brand`, `mobile_name`, `price`, `date_of_la
 --
 
 CREATE TABLE `processors` (
-  `mobileID-processor` bigint(20) NOT NULL,
+  `mobileID` bigint(20) NOT NULL,
   `cpu` varchar(30) NOT NULL,
   `gpu` varchar(30) NOT NULL,
   `chipset` varchar(30) NOT NULL,
@@ -237,7 +237,7 @@ CREATE TABLE `processors` (
 -- Dumping data for table `processors`
 --
 
-INSERT INTO `processors` (`mobileID-processor`, `cpu`, `gpu`, `chipset`, `cores`) VALUES
+INSERT INTO `processors` (`mobileID`, `cpu`, `gpu`, `chipset`, `cores`) VALUES
 (10001, '2.0 GHz', 'ARM Mali G72 MP3 800 MHz', 'Mediatek Helio P60 Octacore 2.', 4),
 (10002, '1.8 Ghz', ' Adreno 509', 'Qualcomm Snapdragon 636', 8),
 (10003, '1.8 GHz', '430 MHz Adreno 509', ' Qualcomm Snapdragon 636', 8),
@@ -254,7 +254,7 @@ INSERT INTO `processors` (`mobileID-processor`, `cpu`, `gpu`, `chipset`, `cores`
 --
 
 CREATE TABLE `rear_camera` (
-  `mobileID-rcamera` bigint(20) NOT NULL,
+  `mobileID` bigint(20) NOT NULL,
   `megapixels` varchar(20) NOT NULL,
   `flash` tinyint(1) NOT NULL,
   `video` varchar(20) NOT NULL,
@@ -267,7 +267,7 @@ CREATE TABLE `rear_camera` (
 -- Dumping data for table `rear_camera`
 --
 
-INSERT INTO `rear_camera` (`mobileID-rcamera`, `megapixels`, `flash`, `video`, `dual_camera`, `aperture`, `features`) VALUES
+INSERT INTO `rear_camera` (`mobileID`, `megapixels`, `flash`, `video`, `dual_camera`, `aperture`, `features`) VALUES
 (10001, '16MP + 2MP', 1, '1080P, 720P', 1, 'F1.85', 'Sensor Size, Pixel Data: 1/3.1, 1.0 micrometer, Sensor Type: CMOS, Maximum Zoom Multiples: 4x, Aperture: F1.85, Focal Length: 3.62 mm, Flashlight, Lens Number: 5P, Video: 1080P, 720P, Photo Management'),
 (10002, '12MP + 2Mp', 1, 'YES', 1, 'F2.2', 'Primary Sensor - f/2.2, 1.25 microns Pixel Size, 5P Lens, Secondary Sensor - f/2.0, 1.12 microns Pixel Size, 4P Lens, PDAF'),
 (10003, '16MP + 5Mp', 1, 'YES', 1, 'F1.8', '16MP - PDAF (f1.8, 1.12 micrometer), 5MP - f2.2, 1.0 micrometer\r\n'),
@@ -285,7 +285,7 @@ INSERT INTO `rear_camera` (`mobileID-rcamera`, `megapixels`, `flash`, `video`, `
 
 CREATE TABLE `reviews` (
   `reviewID` bigint(20) NOT NULL,
-  `mobileID-review` bigint(20) NOT NULL,
+  `mobileID` bigint(20) NOT NULL,
   `userID` int(11) NOT NULL,
   `heading` varchar(50) NOT NULL,
   `content` varchar(1500) NOT NULL,
@@ -299,27 +299,28 @@ CREATE TABLE `reviews` (
 --
 
 CREATE TABLE `sensors` (
-  `mobileID-sensors` bigint(20) NOT NULL,
+  `mobileID` bigint(20) NOT NULL,
   `accelerometer` tinyint(1) NOT NULL,
   `proximity` tinyint(1) NOT NULL,
   `fingerprint` tinyint(1) NOT NULL,
   `gyroscope` tinyint(1) NOT NULL,
-  `ambient_light` tinyint(1) NOT NULL
+  `ambient_light` tinyint(1) NOT NULL,
+  `extra` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `sensors`
 --
 
-INSERT INTO `sensors` (`mobileID-sensors`, `accelerometer`, `proximity`, `fingerprint`, `gyroscope`, `ambient_light`) VALUES
-(10001, 1, 1, 1, 1, 1),
-(10002, 1, 1, 1, 1, 1),
-(10003, 1, 1, 1, 1, 1),
-(10004, 1, 1, 1, 1, 1),
-(10005, 1, 1, 1, 1, 1),
-(10006, 1, 1, 1, 1, 1),
-(10007, 1, 1, 1, 1, 1),
-(10008, 1, 1, 1, 1, 1);
+INSERT INTO `sensors` (`mobileID`, `accelerometer`, `proximity`, `fingerprint`, `gyroscope`, `ambient_light`, `extra`) VALUES
+(10001, 1, 1, 1, 1, 1, 'Magnetic Induction'),
+(10002, 1, 1, 1, 1, 1, ' E Compass, Hall Sensor'),
+(10003, 1, 1, 1, 1, 1, 'Magnetometer, E-compass'),
+(10004, 1, 1, 1, 1, 1, 'E-compass, Hall Sensor, RGB Sensor'),
+(10005, 1, 1, 1, 1, 1, 'Pedometer'),
+(10006, 1, 1, 1, 1, 1, 'E-compass'),
+(10007, 1, 1, 1, 1, 1, ' Face ID, Barometer, Three-axis Gyro'),
+(10008, 1, 1, 1, 1, 1, ' Phone Status Indicator');
 
 -- --------------------------------------------------------
 
@@ -328,7 +329,7 @@ INSERT INTO `sensors` (`mobileID-sensors`, `accelerometer`, `proximity`, `finger
 --
 
 CREATE TABLE `storage` (
-  `mobileID-storage` bigint(20) NOT NULL,
+  `mobileID` bigint(20) NOT NULL,
   `ram` int(11) NOT NULL,
   `rom` int(11) NOT NULL,
   `expandable` tinyint(1) NOT NULL
@@ -338,7 +339,7 @@ CREATE TABLE `storage` (
 -- Dumping data for table `storage`
 --
 
-INSERT INTO `storage` (`mobileID-storage`, `ram`, `rom`, `expandable`) VALUES
+INSERT INTO `storage` (`mobileID`, `ram`, `rom`, `expandable`) VALUES
 (10001, 6, 64, 1),
 (10002, 6, 64, 1),
 (10003, 4, 64, 1),
@@ -355,36 +356,13 @@ INSERT INTO `storage` (`mobileID-storage`, `ram`, `rom`, `expandable`) VALUES
 --
 
 CREATE TABLE `stores` (
-  `mobileID-stores` bigint(20) NOT NULL,
+  `mobileID` bigint(20) NOT NULL,
   `storeID` bigint(20) NOT NULL,
   `store_name` varchar(20) NOT NULL,
   `store_link` varchar(500) NOT NULL,
   `review_link` varchar(500) NOT NULL,
   `ratings` decimal(10,0) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `users`
---
-
-CREATE TABLE `users` (
-  `UserID` int(11) NOT NULL,
-  `username` varchar(100) NOT NULL,
-  `Email` varchar(100) NOT NULL,
-  `Phone Number` varchar(20) NOT NULL,
-  `password` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`UserID`, `username`, `Email`, `Phone Number`, `password`) VALUES
-(40003, 'ravi', 'cse170001039@iiti.ac.in', '', '6eea9b7ef19179a06954edd0f6c05ceb'),
-(40004, 'adminRAVI', 'cse170001039@gmail.com', '', '21232f297a57a5a743894a0e4a801fc3'),
-(40005, 'adminADI', 'aditya.gupta04@rediff.com', '', '21232f297a57a5a743894a0e4a801fc3');
 
 --
 -- Indexes for dumped tables
@@ -394,37 +372,37 @@ INSERT INTO `users` (`UserID`, `username`, `Email`, `Phone Number`, `password`) 
 -- Indexes for table `battery`
 --
 ALTER TABLE `battery`
-  ADD PRIMARY KEY (`mobileID-battery`);
+  ADD PRIMARY KEY (`mobileID`);
 
 --
 -- Indexes for table `connectivity`
 --
 ALTER TABLE `connectivity`
-  ADD PRIMARY KEY (`mobileID-connectivity`);
+  ADD PRIMARY KEY (`mobileID`);
 
 --
 -- Indexes for table `design`
 --
 ALTER TABLE `design`
-  ADD PRIMARY KEY (`mobileID-design`);
+  ADD PRIMARY KEY (`mobileID`);
 
 --
 -- Indexes for table `display`
 --
 ALTER TABLE `display`
-  ADD PRIMARY KEY (`mobileID-display`);
+  ADD PRIMARY KEY (`mobileID`);
 
 --
 -- Indexes for table `front_camera`
 --
 ALTER TABLE `front_camera`
-  ADD PRIMARY KEY (`mobileID-fcamera`);
+  ADD PRIMARY KEY (`mobileID`);
 
 --
 -- Indexes for table `media`
 --
 ALTER TABLE `media`
-  ADD PRIMARY KEY (`mobileID-media`);
+  ADD PRIMARY KEY (`mobileID`);
 
 --
 -- Indexes for table `overview`
@@ -436,43 +414,37 @@ ALTER TABLE `overview`
 -- Indexes for table `processors`
 --
 ALTER TABLE `processors`
-  ADD PRIMARY KEY (`mobileID-processor`);
+  ADD PRIMARY KEY (`mobileID`);
 
 --
 -- Indexes for table `rear_camera`
 --
 ALTER TABLE `rear_camera`
-  ADD PRIMARY KEY (`mobileID-rcamera`);
+  ADD PRIMARY KEY (`mobileID`);
 
 --
 -- Indexes for table `reviews`
 --
 ALTER TABLE `reviews`
-  ADD PRIMARY KEY (`mobileID-review`);
+  ADD PRIMARY KEY (`mobileID`);
 
 --
 -- Indexes for table `sensors`
 --
 ALTER TABLE `sensors`
-  ADD PRIMARY KEY (`mobileID-sensors`);
+  ADD PRIMARY KEY (`mobileID`);
 
 --
 -- Indexes for table `storage`
 --
 ALTER TABLE `storage`
-  ADD PRIMARY KEY (`mobileID-storage`);
+  ADD PRIMARY KEY (`mobileID`);
 
 --
 -- Indexes for table `stores`
 --
 ALTER TABLE `stores`
-  ADD PRIMARY KEY (`mobileID-stores`);
-
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`UserID`);
+  ADD PRIMARY KEY (`mobileID`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -482,37 +454,37 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `battery`
 --
 ALTER TABLE `battery`
-  MODIFY `mobileID-battery` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10009;
+  MODIFY `mobileID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10009;
 
 --
 -- AUTO_INCREMENT for table `connectivity`
 --
 ALTER TABLE `connectivity`
-  MODIFY `mobileID-connectivity` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10009;
+  MODIFY `mobileID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10009;
 
 --
 -- AUTO_INCREMENT for table `design`
 --
 ALTER TABLE `design`
-  MODIFY `mobileID-design` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10009;
+  MODIFY `mobileID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10009;
 
 --
 -- AUTO_INCREMENT for table `display`
 --
 ALTER TABLE `display`
-  MODIFY `mobileID-display` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10009;
+  MODIFY `mobileID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10009;
 
 --
 -- AUTO_INCREMENT for table `front_camera`
 --
 ALTER TABLE `front_camera`
-  MODIFY `mobileID-fcamera` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10009;
+  MODIFY `mobileID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10009;
 
 --
 -- AUTO_INCREMENT for table `media`
 --
 ALTER TABLE `media`
-  MODIFY `mobileID-media` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `mobileID` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `overview`
@@ -524,43 +496,37 @@ ALTER TABLE `overview`
 -- AUTO_INCREMENT for table `processors`
 --
 ALTER TABLE `processors`
-  MODIFY `mobileID-processor` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10009;
+  MODIFY `mobileID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10009;
 
 --
 -- AUTO_INCREMENT for table `rear_camera`
 --
 ALTER TABLE `rear_camera`
-  MODIFY `mobileID-rcamera` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10009;
+  MODIFY `mobileID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10009;
 
 --
 -- AUTO_INCREMENT for table `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `mobileID-review` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `mobileID` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `sensors`
 --
 ALTER TABLE `sensors`
-  MODIFY `mobileID-sensors` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10009;
+  MODIFY `mobileID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10009;
 
 --
 -- AUTO_INCREMENT for table `storage`
 --
 ALTER TABLE `storage`
-  MODIFY `mobileID-storage` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10009;
+  MODIFY `mobileID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10009;
 
 --
 -- AUTO_INCREMENT for table `stores`
 --
 ALTER TABLE `stores`
-  MODIFY `mobileID-stores` bigint(20) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40006;
+  MODIFY `mobileID` bigint(20) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
